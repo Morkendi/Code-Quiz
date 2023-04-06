@@ -1,0 +1,83 @@
+:root {
+    --primary: #138362;
+    --secondary: #3070D5;
+    --background: #E6E6E6;
+    --letters: #252726;
+}
+
+* {
+    box-sizing: border-box;
+    color: var(--letters);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body{
+    background-color: var(--background);
+    line-height: 1.25;
+    font-size: 18px;
+}
+
+header {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--primary);
+}
+
+#highscore {
+    text-decoration: none;
+    padding: 15px;
+}
+
+.head-timer {
+    display: inline-flex;
+    padding: 15px;
+}
+
+.timer-text {
+    padding: 10px;
+}
+
+/* TODO: Center timer horizontally */
+#remaining-time {
+    align-items: center;
+    padding: 15px;
+}
+
+main{
+    /* TODO: Adjust padding values */
+padding: 15px;
+padding-top: 0px;
+}
+
+.content-card {
+    /* TODO: Adjust padding values */
+    padding: 5px;
+    text-align: center;
+}
+
+.start-button {
+    padding: 8px;
+    border: 10px;
+    border-radius: 5px;
+    font-size:large;
+    color:var(--background);
+    background-color: var(--secondary);
+}
+
+.start-button:hover {
+    cursor: pointer;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: var(--primary);
+}
+
+#footer-link {
+    text-decoration: none;
+    /* TODO: Select name link color */
+    color: white;
+}
