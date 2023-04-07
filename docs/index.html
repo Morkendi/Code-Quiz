@@ -20,26 +20,60 @@
                     <p>Time remaining:</p>
                 </div>
                     <!-- Remaining time (functionality in js) -->
-                    <div id="remaining-time">10</div>
+                    <div id="remaining-time">0</div>
             </div>
         </header>
         <!-- Content card (Change using DOM manipulation) -->
         <main >
-            <div class="content-card">
+            <div id="intro-card">
                 <h2>Coding Quiz Challenge</h2>
                 <p>Try to answer the following code-related questions within the time limit.<br> Keep in mind that incorrect answers will penalize your score/time by 10 seconds!</p>
                 <!-- Trigger Questionnaire -->
-                <button class="start-button"> Start Quiz</button>
+                <button id="start-button" class="btn"> Start Quiz</button>
             </div>
         </main>
+<!-- TODO: Clean classes and id's -->
 <!-- Question 1 -->
-        <div>
-            Commonly used data types DO NOT include:
-            <br><button class="answer-1">1. strings</button>
-            <br><button class="answer-2">2. booleans</button>
-            <br><button class="answer-3">3. alerts</button>
-            <br><button class="answer-4">4. numbers</button>
-        </div>
+<div id="qstn-1" class="question">
+    <p class="qstn-txt">Commonly used data types DO NOT include:</p>
+    <br><button class="btn">1. strings</button>
+    <br><button class="btn">2. booleans</button>
+    <br><button class="btn">3. alerts</button>
+    <br><button class="btn">4. numbers</button>
+</div>
+<!-- Question 2 -->
+<div id="qstn-2" class="question">
+    <p class="qstn-txt">The condition in an if / else statement is enclosed with _____.</p>
+    <br><button class="btn">1. quotes</button>
+    <br><button class="btn">2. curly brackets</button>
+    <br><button class="btn">3. parenthesis</button>
+    <br><button class="btn">4. square brackets</button>
+</div>
+<!-- Question 3 -->
+<div id="qstn-3" class="question">
+    <p class="qstn-txt">Arrays in JavaScript can be used to store _____.</p>
+    <br><button class="btn">1. numbers and strings</button>
+    <br><button class="btn">2. other arrays</button>
+    <br><button class="btn">3. booleans</button>
+    <br><button class="btn">4. all of the above</button>
+</div>
+<!-- Question 4 -->
+<div id="qstn-4" class="question">
+    <p class="qstn-txt">String values must be enclosed within _____ when being assigned to variables.</p>
+    <br><button class="btn">1. commas</button>
+    <br><button class="btn">2. curly brackets</button>
+    <br><button class="btn">3. quotes</button>
+    <br><button class="btn">4. parenthesis</button>
+</div>
+<!-- Question 5 -->
+<div id="qstn-5" class="question">
+    <p class="qstn-txt">A very useful tool used during development and debugging for printing content to the debugger is:</p>
+    <br><button class="btn">1. JavaScript</button>
+    <br><button class="btn">2. terminal / bash</button>
+    <br><button class="btn">3. for loops</button>
+    <br><button class="btn">4. console.log</button>
+</div>
+</div>
         <footer>
             <h3>Made by: <a id="footer-link" href = "https://github.com/Morkendi">Daniel Sanchez Gutierrez</a><h3>
         </footer>

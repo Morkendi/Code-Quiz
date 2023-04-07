@@ -26,6 +26,7 @@ header {
 }
 
 #highscore {
+    font-size: 20px;
     text-decoration: none;
     padding: 15px;
 }
@@ -33,10 +34,6 @@ header {
 .head-timer {
     display: inline-flex;
     padding: 15px;
-}
-
-.timer-text {
-    padding: 10px;
 }
 
 /* TODO: Center timer horizontally */
@@ -51,18 +48,18 @@ padding: 15px;
 padding-top: 0px;
 }
 
-.content-card {
+#intro-card {
     /* TODO: Adjust padding values */
     padding: 5px;
     text-align: center;
 }
 
-.start-button {
+.btn {
     padding: 8px;
-    border: 10px;
+    /* border: 10px; */
     border-radius: 5px;
     font-size:large;
-    color:var(--background);
+    color:white;
     background-color: var(--secondary);
 }
 
