@@ -63,7 +63,7 @@ padding-top: 0px;
     background-color: var(--secondary);
 }
 
-.start-button:hover {
+.btn:hover {
     cursor: pointer;
 }
 
