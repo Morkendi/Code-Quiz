@@ -167,7 +167,7 @@ Timer = setInterval(function() {
 }
 
 function RunQuiz() {
-    // RunTimer();
+    RunTimer();
     document.querySelector("main").style.display = "none";
     Intro.style.display = "none";
     Qstn.style.display = "block";

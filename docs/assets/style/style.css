@@ -17,10 +17,11 @@ body{
     margin: 0px;
     background-color: var(--background);
     line-height: 1.25;
-    font-size: 20px;
+    font-size: 23px;
 }
 
 header {
+    height: 90px;
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
@@ -46,21 +47,26 @@ header a {
 #remaining-time {
     align-items: center;
     padding: 15px;
-    padding-top: 18px;
+    padding-top: 24px;
 }
 
-main{
-padding: 15px;
+#quiz-content {
+    height: 71.5vh;
+    position: relative;
 }
 
 #intro-card {
-    /* Align content vertically and horizontally inside "main" element */
-    padding: 10px;
+    width: 750px;
     text-align: center;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-#intro-card h2 {
-    font-size: 40px;
+h2 {
+    font-size: 30px;
 }
 
 .btn {
@@ -68,7 +74,7 @@ padding: 15px;
     border: 1.5px solid black;
     margin: 5px;
     border-radius: 7px;
-    font-size:large;
+    font-size: 20px;
     color:white;
     background-color: var(--secondary);
 }
@@ -77,7 +83,6 @@ padding: 15px;
     display: flex;
     text-align: left;
     width: 190px;
-    
 }
 
 .btn:hover {
@@ -85,13 +90,14 @@ padding: 15px;
 }
 
 .question {
-    padding: 10px 80px;
+    width: 750px;
+    padding: 10px;
     text-align: left;
-}
-
-.question p {
-    font-size: 22px;
-    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
 .question h3 {
@@ -100,13 +106,13 @@ padding: 15px;
     border-top: 2px solid var(--answer);
 }
 
-.last-card {
-    font-size: 22px;
-}
-
-#ending h2 {
-    font-size: 22px;
-    font-weight: bold;
+#ending {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
 .score {
@@ -146,10 +152,6 @@ footer {
     color: white;
 }
 
-footer h2 {
-    font-size: 25px;
-}
-
 footer a {
-    font-size: 22px;
+    font-size: 28px;
 }
