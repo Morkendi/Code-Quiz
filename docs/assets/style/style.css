@@ -3,6 +3,7 @@
     --secondary: #3070D5;
     --background: #E6E6E6;
     --letters: #252726;
+    --answer: #8F8F8F;
 }
 
 * {
@@ -25,6 +26,10 @@ header {
     background-color: var(--primary);
 }
 
+header a {
+    text-decoration: none;
+}
+
 #highscore {
     font-size: 20px;
     text-decoration: none;
@@ -36,35 +41,88 @@ header {
     padding: 15px;
 }
 
-/* TODO: Center timer horizontally */
 #remaining-time {
     align-items: center;
     padding: 15px;
+    padding-top: 18px;
 }
 
 main{
-    /* TODO: Adjust padding values */
 padding: 15px;
 padding-top: 0px;
 }
 
 #intro-card {
-    /* TODO: Adjust padding values */
-    padding: 5px;
+    padding: 10px;
     text-align: center;
 }
 
 .btn {
     padding: 8px;
-    /* border: 10px; */
-    border-radius: 5px;
+    border: 1.5px solid black;
+    margin: 5px;
+    border-radius: 7px;
     font-size:large;
     color:white;
     background-color: var(--secondary);
 }
 
+.qstn-btn {
+    display: flex;
+    text-align: left;
+    width: 190px;
+    
+}
+
 .btn:hover {
     cursor: pointer;
+}
+
+.question {
+    padding: 10px 80px;
+    text-align: left;
+}
+
+.question p {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.question h3 {
+    padding-top: 5px;
+    color: var(--answer);
+    border-top: 2px solid var(--answer);
+}
+
+.last-card {
+    font-size: 22px;
+}
+
+#ending h2 {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.score {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#final-score {
+    padding-left: 15px;
+}
+
+#name-submit {
+    display: inline-flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#name-input {
+    margin: 0px 10px 0px 10px;
 }
 
 footer {
@@ -77,4 +135,12 @@ footer {
     text-decoration: none;
     /* TODO: Select name link color */
     color: white;
+}
+
+footer h2 {
+    font-size: 25px;
+}
+
+footer a {
+    font-size: 22px;
 }
