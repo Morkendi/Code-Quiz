@@ -12,10 +12,12 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+html,
 body{
+    margin: 0px;
     background-color: var(--background);
     line-height: 1.25;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 header {
@@ -49,12 +51,16 @@ header a {
 
 main{
 padding: 15px;
-padding-top: 0px;
 }
 
 #intro-card {
+    /* Align content vertically and horizontally inside "main" element */
     padding: 10px;
     text-align: center;
+}
+
+#intro-card h2 {
+    font-size: 40px;
 }
 
 .btn {
@@ -126,6 +132,9 @@ padding-top: 0px;
 }
 
 footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     display: flex;
     justify-content: center;
     background-color: var(--primary);

@@ -24,8 +24,9 @@
                     <div id="remaining-time"></div>
             </div>
         </header>
+    <div id="quiz-content">
         <!-- Intro card -->
-        <main >
+        <main>
             <div id="intro-card">
                 <h2>Coding Quiz Challenge</h2>
                 <p>Try to answer the following code-related questions within the time limit.<br> Keep in mind that incorrect answers will penalize your score/time by 10 seconds!</p>
@@ -33,31 +34,29 @@
                 <button id="start-btn" class="btn"> Start Quiz</button>
             </div>
         </main>
-<!-- Question Template -->
-<div id="qstn" class="question">
-    <p id="qstn-txt"></p>
-    <div id="btn-grid">
+        <!-- Question Template -->
+        <div id="qstn" class="question">
+            <p id="qstn-txt"></p>
+            <div id="btn-grid"></div>
+            <br><h3 class="answr-msg"></h3>
+        </div>
+        <!-- Submit Highscore -->
+        <div id="ending" class="last-card">
+            <h2>Finished!</h2>
+            <div class="score">
+                <p>Your final score is:</p>
+                <p id="final-score"></p>
+            </div>
+            <div id="name-submit">
+                <p>Enter initials:</p>
+                <input id="name-input">
+                <button id="hs-submit" class="btn">Submit</button>
+            </div>
+        </div>
     </div>
-    <br><h3 class="answr-msg"></h3>
-
-</div>
-<!-- TODO: Set score identifier -->
-<!-- Submit Highscore -->
-<div id="ending" class="last-card">
-    <h2>Finished!</h2>
-    <div class="score">
-        <p>Your final score is:</p>
-        <p id="final-score"></p>
-    </div>
-    <div id="name-submit">
-        <p>Enter initials:</p>
-        <input id="name-input">
-        <button id="hs-submit" class="btn">Submit</button>
-    </div>
-</div>
         <footer>
             <h2>Made by: <a id="footer-link" href = "https://github.com/Morkendi">Daniel Sanchez Gutierrez</a><h2>
         </footer>
-        <script src="script.js"></script>
+        <script src="./assets/js/script.js"></script>
     </body>
 </html>
