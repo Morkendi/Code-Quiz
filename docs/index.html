@@ -13,69 +13,50 @@
         <header>
             <!-- Link to Highscores section -->
             <a href = "highscores.html" id="highscore">Highscores</a>
-            <h1 id="title"> Code Quiz</h1>
+            <!-- TODO: Set link to finished deployment -->
+            <h1 id="title"> <a href="">Code Quiz</a></h1>
             <!-- Timer element -->
             <div class="head-timer">
                 <div class="timer-text">
                     <p>Time remaining:</p>
                 </div>
-                    <!-- Remaining time (functionality in js) -->
-                    <div id="remaining-time">0</div>
+                    <!-- Remaining time -->
+                    <div id="remaining-time"></div>
             </div>
         </header>
-        <!-- Content card (Change using DOM manipulation) -->
+        <!-- Intro card -->
         <main >
             <div id="intro-card">
                 <h2>Coding Quiz Challenge</h2>
                 <p>Try to answer the following code-related questions within the time limit.<br> Keep in mind that incorrect answers will penalize your score/time by 10 seconds!</p>
                 <!-- Trigger Questionnaire -->
-                <button id="start-button" class="btn"> Start Quiz</button>
+                <button id="start-btn" class="btn"> Start Quiz</button>
             </div>
         </main>
-<!-- TODO: Clean classes and id's -->
-<!-- Question 1 -->
-<div id="qstn-1" class="question">
-    <p class="qstn-txt">Commonly used data types DO NOT include:</p>
-    <br><button class="btn">1. strings</button>
-    <br><button class="btn">2. booleans</button>
-    <br><button class="btn">3. alerts</button>
-    <br><button class="btn">4. numbers</button>
+<!-- Question Template -->
+<div id="qstn" class="question">
+    <p id="qstn-txt"></p>
+    <div id="btn-grid">
+    </div>
+    <br><h3 class="answr-msg"></h3>
+
 </div>
-<!-- Question 2 -->
-<div id="qstn-2" class="question">
-    <p class="qstn-txt">The condition in an if / else statement is enclosed with _____.</p>
-    <br><button class="btn">1. quotes</button>
-    <br><button class="btn">2. curly brackets</button>
-    <br><button class="btn">3. parenthesis</button>
-    <br><button class="btn">4. square brackets</button>
-</div>
-<!-- Question 3 -->
-<div id="qstn-3" class="question">
-    <p class="qstn-txt">Arrays in JavaScript can be used to store _____.</p>
-    <br><button class="btn">1. numbers and strings</button>
-    <br><button class="btn">2. other arrays</button>
-    <br><button class="btn">3. booleans</button>
-    <br><button class="btn">4. all of the above</button>
-</div>
-<!-- Question 4 -->
-<div id="qstn-4" class="question">
-    <p class="qstn-txt">String values must be enclosed within _____ when being assigned to variables.</p>
-    <br><button class="btn">1. commas</button>
-    <br><button class="btn">2. curly brackets</button>
-    <br><button class="btn">3. quotes</button>
-    <br><button class="btn">4. parenthesis</button>
-</div>
-<!-- Question 5 -->
-<div id="qstn-5" class="question">
-    <p class="qstn-txt">A very useful tool used during development and debugging for printing content to the debugger is:</p>
-    <br><button class="btn">1. JavaScript</button>
-    <br><button class="btn">2. terminal / bash</button>
-    <br><button class="btn">3. for loops</button>
-    <br><button class="btn">4. console.log</button>
-</div>
+<!-- TODO: Set score identifier -->
+<!-- Submit Highscore -->
+<div id="ending" class="last-card">
+    <h2>Finished!</h2>
+    <div class="score">
+        <p>Your final score is:</p>
+        <p id="final-score"></p>
+    </div>
+    <div id="name-submit">
+        <p>Enter initials:</p>
+        <input id="name-input">
+        <button id="hs-submit" class="btn">Submit</button>
+    </div>
 </div>
         <footer>
-            <h3>Made by: <a id="footer-link" href = "https://github.com/Morkendi">Daniel Sanchez Gutierrez</a><h3>
+            <h2>Made by: <a id="footer-link" href = "https://github.com/Morkendi">Daniel Sanchez Gutierrez</a><h2>
         </footer>
         <script src="script.js"></script>
     </body>
