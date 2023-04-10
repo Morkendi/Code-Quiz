@@ -1,9 +1,9 @@
-// Array with questions and answers for the quiz
+// Array with questions and answers
 const Questionnaire = [
         {
             Qstn: "Commonly used data types DO NOT include:",
             Answers: [
-                {Text: "Alerts", Status: true}, // Correct answer
+                {Text: "Alerts", Status: true}, 
                 {Text: "Strings", Status: false},
                 {Text: "Booleans", Status: false},
                 {Text: "Numbers", Status: false},
@@ -14,7 +14,7 @@ const Questionnaire = [
             Answers: [
                 {Text: "Quotes", Status: false},
                 {Text: "Curly brackets", Status: false},
-                {Text: "Parenthesis", Status: true}, // Correct answer
+                {Text: "Parenthesis", Status: true}, 
                 {Text: "Square brackets", Status: false},
             ]
         },
@@ -24,7 +24,7 @@ const Questionnaire = [
                 {Text: "Numbers & strings", Status: false},
                 {Text: "Other arrays", Status: false},
                 {Text: "Booleans", Status: false},
-                {Text: "All of the above", Status: true}, // Correct answer
+                {Text: "All of the above", Status: true},
             ]
         },
         {
@@ -32,7 +32,7 @@ const Questionnaire = [
             Answers: [
                 {Text: "Commas", Status: false},
                 {Text: "Curly brackets", Status: false},
-                {Text: "Quotes", Status: true}, // Correct answer
+                {Text: "Quotes", Status: true},
                 {Text: "Parenthesis", Status: false},
             ]
         },
@@ -56,6 +56,7 @@ const Questionnaire = [
     //Question elements
     const QstnTxt = document.querySelector("#qstn-txt");
     const AnswrTxt = document.querySelector(".answr-msg");
+    const ErrorMsg = document.querySelector(".error-msg")
 
     // Buttons
     const StartBtn = document.querySelector("#start-btn");
@@ -68,8 +69,6 @@ const Questionnaire = [
     var Timer;
     var TimerCount;
     var CurrentQuestionIndex;
-
-// TODO: Create functions
 
 // Set starting conditions when page is loaded
 function Init() {
@@ -98,11 +97,14 @@ function ShowQuestion() {
     ResetState()
     // Display the question
     var CurrentQuestion = Questionnaire[CurrentQuestionIndex];
-    QstnTxt.innerHTML = CurrentQuestion.Qstn
+    if(CurrentQuestionIndex > Questionnaire.length) {
+        return
+    }
+    QstnTxt.textContent = CurrentQuestion.Qstn
     // Display the corresponding answers to the question
     CurrentQuestion.Answers.forEach(Answer => {
         const QstnBtn = document.createElement("button");
-        QstnBtn.innerText = Answer.Text;
+        QstnBtn.textContent = Answer.Text;
         QstnBtn.classList.add("btn", "qstn-btn");
         BtnGrid.appendChild(QstnBtn);
         if(Answer.Status) {
@@ -123,18 +125,20 @@ function ResetState() {
         TimerElement.textContent = 0;
         // Set remaining time as Highscore
         FinalScore.textContent = TimerCount
-        // Save Highscore in local Storage
         // Display "Ending" block element
         Qstn.style.display = "none";
+        ErrorMsg.style.display = "none";
         Ending.style.display = "block";
     }
 }
 
+// Determine if answer selected is true or false
 function SelectAnswer(e) {
     const SelectedBtn = e.target;
     const isCorrect = SelectedBtn.dataset.correct === "true";
     if (isCorrect) {
         RightAnswr();
+        // Increase QuestionIndex to display next question
         CurrentQuestionIndex ++;
         ShowQuestion();
     } else {
@@ -166,6 +170,23 @@ Timer = setInterval(function() {
 }, 1000);
 }
 
+function SubmitScore() {
+    let ErrorMsg = document.querySelector(".error-msg")
+    let Score = TimerCount;
+    let Name = document.querySelector("#name-input").value;
+    console.log (Name);
+    localStorage.setItem("Score", Score)
+    localStorage.setItem("Initials", Name)
+    if (Name === "") {
+        ErrorMsg.style.display = "block";
+        ErrorMsg.textContent = "Please enter your Initials";
+    } else {
+        // TODO: Add link to open Highscores tab
+        // window.open()
+        window.location.reload();
+    }
+}
+
 function RunQuiz() {
     RunTimer();
     document.querySelector("main").style.display = "none";
@@ -178,3 +199,4 @@ function RunQuiz() {
 
 Init()
 StartBtn.addEventListener("click", RunQuiz)
+SbmtBtn.addEventListener("click", SubmitScore)
