@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./assets/style/style.css" />
+    <title>Highscores</title>
+</head>
+
+    <body>
+        <header>
+            <!-- Link to Highscores section -->
+            <a href = "highscores.html" id="highscore">Highscores</a>
+            <!-- Link to  -->
+            <h1 id="title"> <a href="https://morkendi.github.io/Code-Quiz/">Code Quiz</a></h1>
+            <!-- Timer element -->
+            <div class="head-timer">
+                <div class="timer-text">
+                    <p>Time remaining:</p>
+                </div>
+                    <!-- Remaining time -->
+                    <div id="remaining-time">0</div>
+            </div>
+        </header>
+        <!-- Set list with highscores -->
+        <main id="score-container">
+            <h2> High Scores</h2>
+            <!-- Display Initials and score -->
+            <div id="score-list">
+                <div class="show-score"></div>
+            </div>
+            <div>
+            <button class="btn"><a href = "./index.html">Go back</a></button>
+            <button id="erase" class="btn">Clear high scores</button>
+            </div>
+        </main>
+        <footer>
+            <h2>Made by: <a id="footer-link" href = "https://github.com/Morkendi">Daniel Sanchez Gutierrez</a><h2>
+        </footer>
+        <script src="./assets/js/highscore.js"></script>
+    </body>
+</html>

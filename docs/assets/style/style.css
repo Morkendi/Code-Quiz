@@ -1,6 +1,8 @@
 :root {
     --primary: #138362;
-    --secondary: #3070D5;
+    --scores: #13836149;
+    --button: #3070D5;
+    --buttonSelect: #23D9EE;
     --background: #E6E6E6;
     --letters: #252726;
     --answer: #8F8F8F;
@@ -51,7 +53,7 @@ header a {
 }
 
 #quiz-content {
-    height: 71.5vh;
+    height: 70vh;
     position: relative;
 }
 
@@ -76,7 +78,7 @@ h2 {
     border-radius: 7px;
     font-size: 20px;
     color:white;
-    background-color: var(--secondary);
+    background-color: var(--button);
 }
 
 .qstn-btn {
@@ -87,6 +89,7 @@ h2 {
 
 .btn:hover {
     cursor: pointer;
+    background-color: var(--buttonSelect);
 }
 
 .question {
@@ -96,11 +99,11 @@ h2 {
     position: absolute;
     top: 50%;
     left: 50%;
-    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
 
-.question h3 {
+.answr-msg,
+.error-msg {
     padding-top: 5px;
     color: var(--answer);
     border-top: 2px solid var(--answer);
@@ -111,7 +114,6 @@ h2 {
     position: absolute;
     top: 50%;
     left: 50%;
-    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
 
@@ -138,7 +140,7 @@ h2 {
 }
 
 footer {
-    position: fixed;
+    position: absolute;
     bottom: 0;
     width: 100%;
     display: flex;
@@ -148,10 +150,33 @@ footer {
 
 #footer-link {
     text-decoration: none;
-    /* TODO: Select name link color */
     color: white;
 }
 
 footer a {
     font-size: 28px;
+}
+
+/* Styles for "Highscores₂ page */
+#score-list {
+    display: inline-flex;
+    flex-direction: column;
+    width: 600px;
+    text-align: left;
+    padding-bottom: 20px;
+}
+
+.show-score {
+    padding: 5px;
+    background-color: var(--scores);
+}
+
+#score-container {
+    text-align: center;
+    height: 100vh;
+}
+
+main a {
+    text-decoration: none;
+    color: var(--background);
 }
