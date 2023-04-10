@@ -125,6 +125,10 @@ function ResetState() {
         TimerElement.textContent = 0;
         // Set remaining time as Highscore
         FinalScore.textContent = TimerCount
+        // If final score is less than 0, final score is displayed as 0
+        if (TimerCount <= 0) {
+            FinalScore.textContent = 0;
+        }
         // Display "Ending" block element
         Qstn.style.display = "none";
         ErrorMsg.style.display = "none";
@@ -181,10 +185,9 @@ function SubmitScore() {
         ErrorMsg.style.display = "block";
         ErrorMsg.textContent = "Please enter your Initials";
     } else {
-        // TODO: Add link to open Highscores tab
-        // window.open()
+        window.open("https://morkendi.github.io/Code-Quiz/highscores.html")
         window.location.reload();
-    }
+    } 
 }
 
 function RunQuiz() {

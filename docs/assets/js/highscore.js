@@ -4,7 +4,7 @@ const EraseBtn = document.querySelector("#erase");
 
 //Print data stored in local Storage
 const GetName = localStorage.getItem ("Initials");
-const GetScore = localStorage.getItem ("Score");
+let GetScore = localStorage.getItem ("Score");
 
 let ScoreList = document.querySelector("#score-list")
 
@@ -14,6 +14,9 @@ ScoreList.removeChild(ScoreList.firstChild)
 
 function AddScore() {
         let ScoreSbmt = document.createElement("p");
+        if (GetScore <= 0) {
+                GetScore = 0;
+        }
         ScoreSbmt.textContent = GetName + " - " + GetScore;
         ScoreSbmt.classList.add("show-score");
         ScoreList.appendChild(ScoreSbmt)
