@@ -42,6 +42,7 @@ Inside this page, the user can see the highscore the have submitted, alongside t
 
 ## Credits
 - Code by: Daniel Sanchez (https://github.com/Morkendi)
+- Video (Used as reference to build certain elements): https://www.youtube.com/watch?v=PBcqGxrr9g8
 
 ## Links
 - Link to GitHub Pages: https://morkendi.github.io/Code-Quiz/
