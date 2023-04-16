@@ -5,7 +5,7 @@ Quizzes are a way for people to practice and test their knowledge regarding a ce
 
 ## Usage
 
-## Lading page
+## Landing page
 
 The landing page consists of 3 main sections:
 - ### **Header**: The header section contains 3 elements
